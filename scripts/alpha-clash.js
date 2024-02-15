@@ -8,11 +8,16 @@
 
 function continueGame(){
     const alphabet = getARandomALphabet();
-    console.log(alphabet)
+    
+    // show randomly alphabet to the screen
+    const currentAlphabet = document.getElementById('current-alphabet');
+    currentAlphabet.innerText = alphabet;
+
+    setBackgroundColorById(alphabet);
 }
 
 function play(){
     hideElementById('home-screen');
     showElementById('playground');
     continueGame()
-}
+}   
